@@ -1,0 +1,277 @@
+[
+  {
+    "key": "bousquet2008allergic",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "okano2023guideline",
+    "status": "verified",
+    "method": "pmid",
+    "mismatches": [],
+    "pubmed": {
+      "pmid": "36509676",
+      "title": "Executive summary: Japanese guidelines for allergic rhinitis 2020.",
+      "journal": "Allergology international : official journal of the Japanese Society of Allergology",
+      "year": "2023",
+      "volume": "72",
+      "issue": "1",
+      "pages": "41-53",
+      "doi": "10.1016/j.alit.2022.11.003"
+    }
+  },
+  {
+    "key": "saito2014jcp",
+    "status": "mismatch",
+    "method": "pmid",
+    "mismatches": [
+      "pages"
+    ],
+    "pubmed": {
+      "pmid": "24919759",
+      "title": "Japanese cedar pollinosis: discovery, nomenclature, and epidemiological trends.",
+      "journal": "Proceedings of the Japan Academy. Series B, Physical and biological sciences",
+      "year": "2014",
+      "volume": "90",
+      "issue": "6",
+      "pages": "203-10",
+      "doi": "10.2183/pjab.90.203"
+    }
+  },
+  {
+    "key": "andersen2012long",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "d2015effects",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "cecchi2010projections",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "anselin1988spatial",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "moran1950notes",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "mhlw2023ndb",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "nies2023air",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "forestry2022",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "schram2017impact",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "burbank2017environmental",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "zheng2015association",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "weathernews2023pollen",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "taylor2007release",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "haahtela2013biodiversity",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "suphioglu1992thunderstorm",
+    "status": "mismatch",
+    "method": "doi",
+    "mismatches": [
+      "pages"
+    ],
+    "pubmed": {
+      "pmid": "9693274",
+      "title": "Thunderstorm asthma due to grass pollen.",
+      "journal": "International archives of allergy and immunology",
+      "year": "1998",
+      "volume": "116",
+      "issue": "4",
+      "pages": "253-60",
+      "doi": "10.1159/000023953"
+    }
+  },
+  {
+    "key": "bacsi2006pollen",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "schappi1999grassgroup5",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "mampage2022subpollen",
+    "status": "verified",
+    "method": "doi",
+    "mismatches": [],
+    "pubmed": {
+      "pmid": "36186266",
+      "title": "Characterization of sub-pollen particles in size-resolved atmospheric aerosol using chemical tracers.",
+      "journal": "Atmospheric Environment: X",
+      "year": "2022",
+      "volume": "15",
+      "issue": "",
+      "pages": "",
+      "doi": "10.1016/j.aeaoa.2022.100177"
+    }
+  },
+  {
+    "key": "wang2008cedarallergen",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "diaz-sanchez1997diesel",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "devalia1997pollution",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "baxter2017air",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "phosri2017interactive",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "hasegawa2015particulate",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "damialis2019trajectories",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "sofiev2013silam",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "zaizen2014modification",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "strachan1989hay",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "perkin2022hygiene",
+    "status": "verified",
+    "method": "doi",
+    "mismatches": [],
+    "pubmed": {
+      "pmid": "36506644",
+      "title": "The hygiene hypothesis for allergy - conception and evolution.",
+      "journal": "Frontiers in allergy",
+      "year": "2022",
+      "volume": "3",
+      "issue": "",
+      "pages": "1051368",
+      "doi": "10.3389/falgy.2022.1051368"
+    }
+  },
+  {
+    "key": "ruokolainen2015biodiversity",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "fu2022indoor",
+    "status": "verified",
+    "method": "doi",
+    "mismatches": [],
+    "pubmed": {
+      "pmid": "38075599",
+      "title": "Indoor microbiome and allergic diseases: From theoretical advances to prevention strategies.",
+      "journal": "Eco-Environment & Health",
+      "year": "2022",
+      "volume": "1",
+      "issue": "3",
+      "pages": "133-146",
+      "doi": "10.1016/j.eehl.2022.09.002"
+    }
+  },
+  {
+    "key": "yamaguchi2023gut",
+    "status": "verified",
+    "method": "doi",
+    "mismatches": [],
+    "pubmed": {
+      "pmid": "35850746",
+      "title": "Effect of gut microbial composition and diversity on major inhaled allergen sensitization and onset of allergic rhinitis.",
+      "journal": "Allergology international : official journal of the Japanese Society of Allergology",
+      "year": "2023",
+      "volume": "72",
+      "issue": "1",
+      "pages": "135-142",
+      "doi": "10.1016/j.alit.2022.06.005"
+    }
+  },
+  {
+    "key": "suto2024ndb",
+    "status": "verified",
+    "method": "doi",
+    "mismatches": [],
+    "pubmed": {
+      "pmid": "38314426",
+      "title": "Literature Review of Studies Using the National Database of the Health Insurance Claims of Japan (NDB): Limitations and Strategies in Using the NDB for Research.",
+      "journal": "JMA journal",
+      "year": "2024",
+      "volume": "7",
+      "issue": "1",
+      "pages": "10-20",
+      "doi": "10.31662/jmaj.2023-0078"
+    }
+  },
+  {
+    "key": "mhlw2025switch_otc",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "abe2022tweets",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "guarnieri2014outdoor",
+    "status": "not_in_pubmed_or_unresolved"
+  },
+  {
+    "key": "rothman2008modern",
+    "status": "mismatch",
+    "method": "title_exact",
+    "mismatches": [
+      "title",
+      "year"
+    ],
+    "pubmed": {
+      "pmid": "40855410",
+      "title": "Survey of practices of handling exposure measurement errors in modern epidemiology: are the best practices in statistics being adopted by epidemiologists?",
+      "journal": "BMC medical research methodology",
+      "year": "2025",
+      "volume": "25",
+      "issue": "1",
+      "pages": "198",
+      "doi": "10.1186/s12874-025-02651-w"
+    }
+  }
+]

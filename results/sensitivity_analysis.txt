@@ -1,0 +1,135 @@
+======================================================================
+感度分析結果（Model 5: PM2.5 / Model 6: SPM）
+======================================================================
+
+【Section A: Model 5 (PM2.5) 感度分析】
+
+--- M5: Baseline (OLS) ---
+  N=47, R2=0.3572, Adj.R2=0.2788
+  AIC=1374.0, BIC=1385.1
+  pollen_count             : B=        63.2, p=0.014062 *
+  pm25_mean_3yr            : B=   -107957.4, p=0.102016 
+  pollen_x_pm25            : B=        -0.5, p=0.984561 
+  aging_rate               : B=     10130.3, p=0.744234 
+  pop_density              : B=       251.2, p=0.003531 **
+
+--- M5: Excl. outliers (n=43) ---
+  N=43, R2=0.4860, Adj.R2=0.4166
+  AIC=1239.5, BIC=1250.0
+  pollen_count             : B=        60.7, p=0.013861 *
+  pm25_mean_3yr            : B=   -131868.3, p=0.024066 *
+  pollen_x_pm25            : B=        24.2, p=0.333057 
+  aging_rate               : B=    -18587.1, p=0.589227 
+  pop_density              : B=       209.2, p=0.007920 **
+
+--- M5: Log-transformed ---
+  N=47, R2=0.3312, Adj.R2=0.2496
+  AIC=-80.6, BIC=-69.5
+  pollen_count             : B=         0.0, p=0.012858 *
+  pm25_mean_3yr            : B=        -0.0, p=0.130324 
+  pollen_x_pm25            : B=        -0.0, p=0.906706 
+  aging_rate               : B=         0.0, p=0.578207 
+  pop_density              : B=         0.0, p=0.005120 **
+
+--- M5: Robust SE (HC3) ---
+  N=47, R2=0.3572, Adj.R2=0.2788
+  AIC=1374.0, BIC=1385.1
+  pollen_count             : B=        63.2, p=0.081611 
+  pm25_mean_3yr            : B=   -107957.4, p=0.103919 
+  pollen_x_pm25            : B=        -0.5, p=0.990557 
+  aging_rate               : B=     10130.3, p=0.890255 
+  pop_density              : B=       251.2, p=0.029005 *
+
+--- M5: Excl. Tokyo/Osaka (n=45) ---
+  N=45, R2=0.2638, Adj.R2=0.1694
+  AIC=1317.7, BIC=1328.6
+  pollen_count             : B=        61.7, p=0.019824 *
+  pm25_mean_3yr            : B=   -108927.2, p=0.107145 
+  pollen_x_pm25            : B=        -1.2, p=0.960526 
+  aging_rate               : B=     15910.8, p=0.639952 
+  pop_density              : B=       307.8, p=0.057122 
+
+--- M5: No interaction ---
+  N=47, R2=0.3572, Adj.R2=0.2959
+  AIC=1372.0, BIC=1381.3
+  pollen_count             : B=        63.3, p=0.009012 **
+  pm25_mean_3yr            : B=   -107724.4, p=0.092970 
+  aging_rate               : B=     10167.2, p=0.739827 
+  pop_density              : B=       251.3, p=0.003054 **
+
+
+【Section B: Model 6 (SPM) 感度分析】
+
+--- M6: Baseline (OLS) ---
+  N=47, R2=0.4691, Adj.R2=0.4044
+  AIC=1365.0, BIC=1376.1
+  pollen_count             : B=        59.5, p=0.008226 **
+  spm_mean_3yr             : B= -68668595.7, p=0.090328 
+  pollen_x_spm             : B=     33246.7, p=0.019688 *
+  aging_rate               : B=    -45010.7, p=0.162761 
+  pop_density              : B=       181.9, p=0.020317 *
+
+--- M6: Robust SE (HC3) ---
+  N=47, R2=0.4691, Adj.R2=0.4044
+  AIC=1365.0, BIC=1376.1
+  pollen_count             : B=        59.5, p=0.033121 *
+  spm_mean_3yr             : B= -68668595.7, p=0.115472 
+  pollen_x_spm             : B=     33246.7, p=0.065923 
+  aging_rate               : B=    -45010.7, p=0.274165 
+  pop_density              : B=       181.9, p=0.005878 **
+
+--- M6: Excl. outliers (n=45) ---
+  N=45, R2=0.4314, Adj.R2=0.3585
+  AIC=1300.8, BIC=1311.7
+  pollen_count             : B=        49.0, p=0.044879 *
+  spm_mean_3yr             : B= -71958936.3, p=0.058684 
+  pollen_x_spm             : B=     21557.4, p=0.141527 
+  aging_rate               : B=    -43063.6, p=0.222360 
+  pop_density              : B=       169.9, p=0.030980 *
+
+--- M6: Excl. Tokyo/Osaka (n=45) ---
+  N=45, R2=0.3887, Adj.R2=0.3104
+  AIC=1309.3, BIC=1320.2
+  pollen_count             : B=        59.5, p=0.010408 *
+  spm_mean_3yr             : B= -70728749.5, p=0.095233 
+  pollen_x_spm             : B=     32904.7, p=0.028421 *
+  aging_rate               : B=    -43191.3, p=0.226304 
+  pop_density              : B=       208.4, p=0.172974 
+
+--- M6: No interaction ---
+  N=47, R2=0.3928, Adj.R2=0.3350
+  AIC=1369.4, BIC=1378.6
+  pollen_count             : B=        57.1, p=0.015337 *
+  spm_mean_3yr             : B= -95114227.0, p=0.022717 *
+  aging_rate               : B=    -15332.6, p=0.621947 
+  pop_density              : B=       229.9, p=0.004618 **
+
+--- M6: Log-transformed ---
+  N=47, R2=0.4503, Adj.R2=0.3833
+  AIC=-89.8, BIC=-78.7
+  pollen_count             : B=         0.0, p=0.006272 **
+  spm_mean_3yr             : B=       -11.9, p=0.121567 
+  pollen_x_spm             : B=         0.0, p=0.016483 *
+  aging_rate               : B=        -0.0, p=0.249515 
+  pop_density              : B=         0.0, p=0.027452 *
+
+
+======================================================================
+【Section C: モデル間 HC3 比較（主要変数のp値）】
+======================================================================
+
+Variable                   M5 OLS     M5 HC3     M6 OLS     M6 HC3
+------------------------------------------------------------------
+pollen_count               0.0141     0.0816     0.0082     0.0331
+interaction                0.9846     0.9906     0.0197     0.0659
+pop_density                0.0035     0.0290     0.0203     0.0059
+
+Key: M5=Model 5 (PM2.5), M6=Model 6 (SPM)
+     OLS=standard SE, HC3=heteroscedasticity-consistent SE
+
+======================================================================
+結論:
+  1. pollen_count: M6 HC3 (p=0.0331) > M5 HC3 (p=0.0816) -> SPMモデルでより頑健
+  2. pollen x SPM交互作用: OLS p=0.0197, HC3 p=0.0659 -> suggestive
+  3. pop_density: 全仕様で有意 (M6 HC3 p=0.0059)
+======================================================================

@@ -1,0 +1,123 @@
+# Configuration for Pollen, PM2.5/SPM, and Allergy Medication Study (v2)
+# Project: NDB_XXX_pollen_allergy_v2
+# Created: 2026-03-16
+# Improvements over v1:
+#   - Actual pollen count data (Weather News) + forest ratio (Forestry Agency)
+#   - PM2.5 + SPM dual particulate exposure
+#   - Allergy-specific outcomes only (excluding code 264)
+
+experiment_mode: false
+
+project_name: "Pollen_Allergy_Spatial_Study_v2"
+project_id: "NDB_XXX_pollen_allergy_v2"
+target_theme: "花粉飛散量・PM2.5/SPM曝露とアレルギー特異的薬剤処方量の都道府県生態学的研究"
+
+# Exposure Variables
+exposure_variables:
+  pollen_count:
+    name: "花粉飛散数"
+    description: "ウェザーニューズ花粉飛散観測データ（都道府県庁所在地、2023年シーズン累積値）"
+    variable_name: "pollen_count"
+    unit: "個/cm2/シーズン"
+    data_source: "Weather News Open Data API (wxtech.weathernews.com)"
+    data_years: [2023]
+
+  forest_ratio:
+    name: "スギ・ヒノキ林面積率"
+    description: "林野庁公表の都道府県別森林面積割合"
+    variable_name: "forest_ratio_pct"
+    unit: "%"
+    data_source: "Forestry Agency"
+
+  pm25:
+    name: "PM2.5年平均濃度"
+    description: "大気汚染常時監視データ 物質コード1200"
+    variable_name: "pm25_mean_3yr"
+    unit: "μg/m3"
+    data_source: "NIES (tenbou.nies.go.jp)"
+    substance_code: "1200"
+    data_years: [2021, 2022, 2023]
+
+  spm:
+    name: "SPM年平均濃度"
+    description: "大気汚染常時監視データ 物質コード1000（浮遊粒子状物質）"
+    variable_name: "spm_mean_3yr"
+    unit: "mg/m3"
+    data_source: "NIES (tenbou.nies.go.jp)"
+    substance_code: "1000"
+    data_years: [2021, 2022, 2023]
+
+# Outcome Variables (allergy-specific only, excluding code 264)
+outcome_variables:
+  antihistamine:
+    name: "抗ヒスタミン剤・アレルギー用薬処方量"
+    description: "第441（抗ヒスタミン剤）＋第449（その他のアレルギー用薬）の処方数量/人口10万人"
+    data_year: 2023
+    unit: "処方数量/10万人"
+    variable_name: "antihistamine_per_100k"
+    drug_classifications: ["441", "449"]
+    classification_names: ["抗ヒスタミン剤", "その他のアレルギー用薬"]
+    source_files: ["内服院外", "内服院内"]
+
+  eye_drops:
+    name: "眼科用剤（外用）処方量"
+    description: "第131（眼科用剤）の外用処方数量/人口10万人"
+    data_year: 2023
+    unit: "処方数量/10万人"
+    variable_name: "eye_drops_per_100k"
+    drug_classifications: ["131"]
+    classification_names: ["眼科用剤"]
+    source_files: ["外用"]
+
+  nasal_sprays:
+    name: "耳鼻科用剤（外用）処方量"
+    description: "第132（耳鼻科用剤）の外用処方数量/人口10万人"
+    data_year: 2023
+    unit: "処方数量/10万人"
+    variable_name: "nasal_sprays_per_100k"
+    drug_classifications: ["132"]
+    classification_names: ["耳鼻科用剤"]
+    source_files: ["外用"]
+
+# Covariates
+covariates:
+  aging_rate:
+    name: "高齢化率"
+    description: "65歳以上人口割合"
+    variable_name: "aging_rate"
+    unit: "%"
+  pop_density:
+    name: "人口密度"
+    description: "人口/面積(km2)"
+    variable_name: "pop_density"
+    unit: "人/km2"
+
+# Input Paths (relative to NDB_Research_Hub root)
+input_paths:
+  ndb_opendata: "02_Data/raw/NDB_OpenData/No.10"
+  air_pollution: "02_Data/raw/Air_Pollution"
+  prescription: "02_Data/raw/NDB_OpenData/No.10/05_処方薬/01_公費レセプトを含まないデータ/01_処方薬（内服／外用／注射）"
+  external_stats: "02_Data/master"
+  population: "02_Data/raw/Statistics_Bureau"
+  geojson: "02_Data/master/spatial"
+
+# Output Paths (relative to NDB_Research_Hub root)
+output_paths:
+  interim: "projects/NDB_XXX_pollen_allergy_v2/data/interim"
+  results: "projects/NDB_XXX_pollen_allergy_v2/results"
+  figures: "projects/NDB_XXX_pollen_allergy_v2/results/figures"
+  tables: "projects/NDB_XXX_pollen_allergy_v2/results/tables"
+  logs: "projects/NDB_XXX_pollen_allergy_v2/logs"
+
+# Analysis Parameters
+analysis_parameters:
+  geographic_unit: "prefecture"
+  n_units: 47
+  regression_models: ["OLS", "SLM", "SEM"]
+  spatial_weight_type: "queen"
+  knn_supplement: 1  # for disconnected islands
+  significance_level: 0.05
+  vif_threshold: 10
+  min_valid_days: 250  # QC filter for air pollution stations
+  station_type: 1  # general monitoring stations only
+  random_seed: 42

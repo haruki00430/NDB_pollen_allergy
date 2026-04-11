@@ -1,0 +1,281 @@
+[
+  {
+    "key": "bousquet2008allergic",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "okano2023guideline",
+    "status": "matched",
+    "method": "pmid",
+    "mismatches": [],
+    "pubmed": {
+      "pmid": "36509676",
+      "doi": "10.1016/j.alit.2022.11.003",
+      "title_compact": "executivesummary:japaneseguidelinesforallergicrhinitis2020.",
+      "journal": "Allergology international : official journal of the Japanese Society of Allergology",
+      "volume": "72",
+      "issue": "1",
+      "year": "2023",
+      "pages": "41-53"
+    }
+  },
+  {
+    "key": "saito2014jcp",
+    "status": "mismatch",
+    "method": "pmid",
+    "mismatches": [
+      "pages"
+    ],
+    "pubmed": {
+      "pmid": "24919759",
+      "doi": "10.2183/pjab.90.203",
+      "title_compact": "japanesecedarpollinosis:discovery,nomenclature,andepidemiologicaltrends.",
+      "journal": "Proceedings of the Japan Academy. Series B, Physical and biological sciences",
+      "volume": "90",
+      "issue": "6",
+      "year": "2014",
+      "pages": "203-10"
+    }
+  },
+  {
+    "key": "andersen2012long",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "d2015effects",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "cecchi2010projections",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "anselin1988spatial",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "moran1950notes",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "mhlw2023ndb",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "nies2023air",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "forestry2022",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "schram2017impact",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "burbank2017environmental",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "zheng2015association",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "weathernews2023pollen",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "taylor2007release",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "haahtela2013biodiversity",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "suphioglu1992thunderstorm",
+    "status": "mismatch",
+    "method": "doi",
+    "mismatches": [
+      "pages"
+    ],
+    "pubmed": {
+      "pmid": "9693274",
+      "doi": "10.1159/000023953",
+      "title_compact": "thunderstormasthmaduetograsspollen.",
+      "journal": "International archives of allergy and immunology",
+      "volume": "116",
+      "issue": "4",
+      "year": "1998",
+      "pages": "253-60"
+    }
+  },
+  {
+    "key": "bacsi2006pollen",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "schappi1999grassgroup5",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "mampage2022subpollen",
+    "status": "mismatch",
+    "method": "doi",
+    "mismatches": [
+      "doi"
+    ],
+    "pubmed": {
+      "pmid": "36186266",
+      "doi": "10.1038/srep29618",
+      "title_compact": "characterizationofsub-pollenparticlesinsize-resolvedatmosphericaerosolusingchemicaltracers.",
+      "journal": "Atmospheric Environment: X",
+      "volume": "15",
+      "issue": "",
+      "year": "2022",
+      "pages": ""
+    }
+  },
+  {
+    "key": "wang2008cedarallergen",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "diaz-sanchez1997diesel",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "devalia1997pollution",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "baxter2017air",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "phosri2017interactive",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "hasegawa2015particulate",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "damialis2019trajectories",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "sofiev2013silam",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "zaizen2014modification",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "strachan1989hay",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "perkin2022hygiene",
+    "status": "mismatch",
+    "method": "doi",
+    "mismatches": [
+      "doi"
+    ],
+    "pubmed": {
+      "pmid": "36506644",
+      "doi": "10.1111/all.13763",
+      "title_compact": "thehygienehypothesisforallergy-conceptionandevolution.",
+      "journal": "Frontiers in allergy",
+      "volume": "3",
+      "issue": "",
+      "year": "2022",
+      "pages": "1051368"
+    }
+  },
+  {
+    "key": "ruokolainen2015biodiversity",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "fu2022indoor",
+    "status": "matched",
+    "method": "doi",
+    "mismatches": [],
+    "pubmed": {
+      "pmid": "38075599",
+      "doi": "10.1016/j.eehl.2022.09.002",
+      "title_compact": "indoormicrobiomeandallergicdiseases:fromtheoreticaladvancestopreventionstrategies.",
+      "journal": "Eco-Environment & Health",
+      "volume": "1",
+      "issue": "3",
+      "year": "2022",
+      "pages": "133-146"
+    }
+  },
+  {
+    "key": "yamaguchi2023gut",
+    "status": "matched",
+    "method": "doi",
+    "mismatches": [],
+    "pubmed": {
+      "pmid": "35850746",
+      "doi": "10.1016/j.alit.2022.06.005",
+      "title_compact": "effectofgutmicrobialcompositionanddiversityonmajorinhaledallergensensitizationandonsetofallergicrhinitis.",
+      "journal": "Allergology international : official journal of the Japanese Society of Allergology",
+      "volume": "72",
+      "issue": "1",
+      "year": "2023",
+      "pages": "135-142"
+    }
+  },
+  {
+    "key": "suto2024ndb",
+    "status": "matched",
+    "method": "doi",
+    "mismatches": [],
+    "pubmed": {
+      "pmid": "38314426",
+      "doi": "10.31662/jmaj.2023-0078",
+      "title_compact": "literaturereviewofstudiesusingthenationaldatabaseofthehealthinsuranceclaimsofjapan(ndb):limitationsandstrategiesinusingthendbforresearch.",
+      "journal": "JMA journal",
+      "volume": "7",
+      "issue": "1",
+      "year": "2024",
+      "pages": "10-20"
+    }
+  },
+  {
+    "key": "mhlw2025switch_otc",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "abe2022tweets",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "guarnieri2014outdoor",
+    "status": "not_found_pubmed"
+  },
+  {
+    "key": "rothman2008modern",
+    "status": "mismatch",
+    "method": "title",
+    "mismatches": [
+      "title",
+      "year"
+    ],
+    "pubmed": {
+      "pmid": "40855410",
+      "doi": "10.1093/aje/kwab246",
+      "title_compact": "surveyofpracticesofhandlingexposuremeasurementerrorsinmodernepidemiology:arethebestpracticesinstatisticsbeingadoptedbyepidemiologists?",
+      "journal": "BMC medical research methodology",
+      "volume": "25",
+      "issue": "1",
+      "year": "2025",
+      "pages": "198"
+    }
+  }
+]
