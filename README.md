@@ -1,3 +1,5 @@
+﻿> **正本リポジトリ（GitHub Private）：** https://github.com/haruki00430/NDB_XXX_pollen_allergy_v2
+
 # NDB_XXX_pollen_allergy_v2
 
 ## ステータス（2026-04-05 リポジトリ照合）
