@@ -1,162 +1,162 @@
-﻿> **正本リポジトリ（GitHub Private）：** https://github.com/haruki00430/NDB_XXX_pollen_allergy_v2
+# How Outcome Definition Changes Ecological Inference in Prescription-Based Epidemiology: A Natural Experiment
 
-# NDB_XXX_pollen_allergy_v2
-
-## ステータス（2026-04-05 リポジトリ照合）
-
-- **原稿**: `Manuscript_pollen_allergy.qmd`（プロジェクトルート）
-- **参考文献**: `references.bib`
-- Phase 進捗は README 後段を参照。記述とフォルダ実体がずれたら実体を正とする。
-
-## プロジェクト概要
-
-**タイトル**: 花粉・PM2.5/SPM×抗アレルギー薬（v2改善版）
-
-**研究デザイン**: 都道府県単位の生態学的研究（N=47）
-
-**NDBバージョン**: No.10 (FY2023)
-
-## 研究目的
-
-実測花粉データ（ウェザーニューズ Open Data API）とPM2.5/SPMの複合曝露が抗アレルギー薬処方に与える影響を検証する。
-
-## v1からの改善点
-
-1. **実測花粉データ**: ウェザーニューズ Open Data API 2023年花粉（森林率→実測値）
-2. **SPM追加**: PM2.5に加えてSPMも分析（相関r=0.789）
-3. **アレルギー特異的**: コード441,449,131,132のみ（264外用消炎剤を除外）
-
-## データソース
-
-### 曝露変数
-- **花粉データ**: ウェザーニューズ Open Data API 2023年（grain/m³）
-- **PM2.5**: 環境省大気汚染物質広域監視システム（2021-2023年3年平均）
-- **SPM**: 同上（2021-2023年3年平均）
-
-### アウトカム
-- **NDB処方薬**: アレルギー特異的（コード441, 449, 131, 132）
-  - 441: 抗ヒスタミン剤
-  - 449: その他のアレルギー用薬
-  - 131: 鼻炎用点鼻薬
-  - 132: 鼻炎用内服薬
-  - **除外**: 264（外用消炎剤）→ v1でノイズと判明
-
-### 共変量
-- 人口密度
-- 高齢化率
-
-## 主要結果
-
-### Model 5（PM2.5モデル）
-- **R²**: 0.357
-- **pollen**: β=63.2/grain (p=0.014*)
-- **pop_density**: β=251.2 (p=0.004**)
-
-### Model 6（SPM代替モデル）← 最重要発見
-- **R²**: 0.469
-- **pollen×SPM交互作用**: β=33,247 (p=0.020*)
-- **pollen単独**: β=71.8 (p=0.008**)
-
-### 花粉指標の比較
-- **pollen_count（実測）**: R²=0.357
-- **forest_ratio（v1）**: R²=0.242
-- **ΔAIC**: 7.7（実測値の優位性）
-
-### 感度分析
-- **7/8仕様でpollen p<0.05**（頑健性確認）
-- **HC3のみ p=0.082**（限界有意）
-- **Moran's I**: 全モデルで非有意（空間的自己相関なし）
-
-## ファイル構成
-
-```
-projects/NDB_XXX_pollen_allergy_v2/
-├── README.md                          # このファイル
-├── Manuscript_pollen_allergy.qmd      # 論文原稿（英語）
-├── references.bib                     # 参考文献
-├── vancouver.csl                      # 引用スタイル
-├── data/
-│   └── interim/                       # 中間データ
-│       ├── pollen_2023.csv           # ウェザーニューズ花粉データ
-│       ├── pm25_spm_2021_2023.csv    # PM2.5/SPM 3年平均
-│       └── allergy_prescription.csv  # 抗アレルギー薬処方量
-├── results/
-│   └── figures/                       # 図表
-│       ├── model5_scatter.png        # Model 5 散布図
-│       ├── model6_interaction.png    # Model 6 交互作用プロット
-│       └── sensitivity_forest.png    # 感度分析 Forest plot
-└── docs/
-    └── implementation_plan.md         # 実装計画
-```
-
-## 投稿先
-
-### 第一希望
-- **Environmental Research** (IF: 8.3)
-
-### 第二希望
-- **Science of The Total Environment** (IF: 9.8)
-
-## Phase進捗
-
-- [x] Phase 1: 花粉データ取得（ウェザーニューズ API）
-- [x] Phase 2: PM2.5/SPMデータ取得（環境省）
-- [x] Phase 3: NDB処方薬データ抽出（441,449,131,132）
-- [x] Phase 4: データ統合
-- [x] Phase 5: 回帰モデル構築（Model 5, 6）
-- [x] Phase 6: 感度分析（8仕様）
-- [x] Phase 7: 論文執筆
-
-**進捗**: 7/7 完了（100%）
-
-## 技術メモ
-
-### NDB処方薬ファイルの注意
-- 薬効分類コード・名称は先頭行のみ、2行目以降はNaN
-- **必須修正**: `df['薬効分類コード'].ffill()` で前方補完してからフィルタ
-
-### PM2.5とSPMの多重共線性
-- **相関**: r=0.789（高い相関）
-- **対応**: 同一モデルに同時投入不可 → Model 5とModel 6で分離
-
-### ウェザーニューズ Open Data API
-- URL: `https://weathernews.jp/s/pollen/open_data/`
-- 2023年花粉データ（都道府県別）
-- grain/m³ 単位
-
-## 主要スクリプト
-
-1. `01_fetch_pollen_data.py`: ウェザーニューズAPI花粉データ取得
-2. `02_fetch_pm25_spm.py`: 環境省PM2.5/SPMデータ取得
-3. `03_extract_ndb_allergy.py`: NDB抗アレルギー薬抽出
-4. `04_data_integration.py`: データ統合
-5. `05_regression_models.py`: Model 5, 6 回帰分析
-6. `06_sensitivity_analysis.py`: 8仕様感度分析
-7. `07_visualization.py`: 図表作成
-
-## v1との比較
-
-| 項目 | v1 (pollen_pm25_spatial) | v2 (pollen_allergy_v2) |
-|------|-------------------------|------------------------|
-| **花粉指標** | 森林率（代理指標） | 実測花粉（grain/m³） |
-| **大気汚染** | PM2.5のみ | PM2.5 + SPM |
-| **アウトカム** | コード264含む | 441,449,131,132のみ |
-| **R²** | <0.02（Null Result） | 0.357（Model 5）, 0.469（Model 6） |
-| **pollen有意性** | 非有意 | p=0.014* (Model 5), p=0.008** (Model 6) |
-
-## 関連プロジェクト
-
-- **NDB_XXX_pollen_pm25_spatial**: v1（Null Result → 投稿断念）
-- **NDB_XXX_pollen_dermatitis**: 花粉×気象×外用消炎剤（皮膚炎）
-
-## 更新履歴
-
-- **2026-03-16**: プロジェクト開始（v1のNull Resultを受けて改善版）
-- **2026-03-16**: Phase 1-7完了
-- **2026-03-16**: 論文原稿完成（HTML/DOCX出力）
+**アウトカム定義が処方ベース疫学の生態学的推論を変える：自然実験**
 
 ---
 
-**PI**: PI（要更新）
-**Students**: TBD
-**Status**: Completed (投稿準備中)
+## Overview / 概要
+
+### English
+
+This repository contains analysis code for a nationwide ecological study examining how **outcome definition** influences ecological inference in prescription-based epidemiology. Using Japan's 47 prefectures and seasonal pollen exposure as a natural-experiment signal, we compared three outcome definitions — an allergy-specific prescription index, a pharmacologically heterogeneous comparator, and a pharmacologically unrelated negative control — under identical exposure data, covariates, and regression frameworks.
+
+**Key finding**: Outcome definition changed recoverable ecological signal by **1.72-fold** (R² = 0.469 vs. 0.272) under identical exposure and models. Pollen associations were significant in 7/8 sensitivity specifications for the allergy-specific outcome, compared with 5/6 for the best comparator model. A pharmacologically unrelated negative control (oral hypoglycaemic agents) showed no pollen association, confirming signal differences reflected outcome specificity rather than ecological confounding.
+
+**Study design**: Cross-sectional ecological study | N = 47 prefectures | Fiscal Year 2023  
+**OSF pre-registration**: https://osf.io/yuc4a (registered 18 June 2026)
+
+**Manuscript**: Saito H, Ohira T. How Outcome Definition Changes Ecological Inference in Prescription-Based Epidemiology: A Natural Experiment. *(In submission, Journal of Clinical Epidemiology, 2026)*
+
+### 日本語
+
+本リポジトリは、処方ベース疫学における**アウトカム定義**が生態学的推論に与える影響を定量化した全国生態学研究の解析コードを公開するものです。日本47都道府県を分析単位とし、花粉曝露を自然実験シグナルとして、アレルギー特異的処方・薬理学的異種比較アウトカム・陰性対照の3定義を、同一の曝露データ・共変量・回帰枠組みで比較しました。
+
+**主要結果**: アウトカム定義により回収可能な生態学的シグナルが**1.72倍**異なりました（R² = 0.469 対 0.272）。アレルギー特異的アウトカムでは花粉関連が8仕様中7仕様で有意、比較アウトカムでは最良モデルで6仕様中5仕様でした。陰性対照（経口血糖降下薬）では全仕様で花粉関連なし。
+
+**研究デザイン**: 横断的生態学的研究 | N = 47 都道府県 | 2023 年度（令和 5 年度）  
+**OSF 事前登録**: https://osf.io/yuc4a（2026 年 6 月 18 日登録）
+
+---
+
+## Data Sources / データソース
+
+| Source | Variables | 説明 |
+|--------|-----------|------|
+| NDB Open Data No.10 (MHLW, FY2023) | Allergy-specific Rx (codes 441, 449, 131, 132); comparator (264); negative control (396); per 100,000 pop. | 抗アレルギー薬・比較・陰性対照処方量 |
+| Weathernews Open Data API (2023 season) | Cumulative pollen count at prefecture-capital sites (grains/cm²) | 花粉実測データ（都道府県庁所在地） |
+| Japan Atmospheric Environmental Observation System (NIES, 2021–2023) | PM2.5 and SPM: 3-year prefecture means | PM2.5・SPM 3年平均値 |
+| National Census / Population Statistics | Aging rate (%), population density (per km²) | 高齢化率・人口密度 |
+
+> **Note / 注意**: NDB raw data are not included in this repository and are not redistributable.  
+> NDB 生データは本リポジトリに含まれておらず、再配布できません。集計オープンデータは厚生労働省ウェブサイトから入手可能です: https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000177182.html
+
+---
+
+## Repository Structure / リポジトリ構造
+
+```
+NDB_XXX_pollen_allergy_v2/
+├── README.md
+├── requirements.txt                    # Python dependencies / 依存ライブラリ
+├── scripts/                            # Analysis scripts (run in order) / 解析スクリプト（番号順に実行）
+│   ├── 01_extract_prescriptions.py     # NDB prescription data extraction / NDB処方薬データ抽出
+│   ├── 02a_extract_pm25.py             # PM2.5 data extraction / PM2.5データ抽出
+│   ├── 02b_extract_spm.py              # SPM data extraction / SPMデータ抽出
+│   ├── 02c_prepare_pollen_data.py      # Pollen data preparation / 花粉データ準備
+│   ├── 02d_extract_hanako_pollen.py    # Hanako pollen data / はなこさん花粉データ
+│   ├── 02e_download_weathernews_pollen.py  # Weathernews pollen download / ウェザーニューズ花粉取得
+│   ├── 03_integrate_dataset.py         # Dataset integration / データセット統合
+│   ├── 04_statistical_analysis.py      # Main regression analysis / 主要回帰分析
+│   ├── 05_visualization.py             # Figure generation / 図表作成
+│   ├── 06_sensitivity_analysis.py      # Sensitivity analyses (8 specifications) / 感度分析（8仕様）
+│   └── 07_diabetes_negative_control.py # Negative control analysis / 陰性対照解析
+├── data/
+│   └── interim/                        # Intermediate data (excluded from repo) / 中間データ（リポジトリ除外）
+├── results/
+│   └── figures/                        # Output figures / 出力図表
+└── 04_Manuscripts/
+    ├── Manuscript_How_Outcome_Definition.qmd              # Quarto source (submission version)
+    ├── How_Outcome_Definition_Changes_Ecological_Inference_20260618.docx  # Submission DOCX
+    ├── cover_letter_JCE.md                                # Cover letter for JCE
+    ├── highlights_jce.txt                                 # JCE Highlights (≤85 chars each)
+    ├── STROBE_RECORD_checklist_20260618.md                # Reporting checklist
+    ├── OSF_preregistration_draft_20260618.md              # OSF analysis plan (registered)
+    ├── AI_USE_DISCLOSURE.md                               # AI use disclosure
+    ├── references.bib                                     # Reference library
+    └── vancouver.csl                                      # Citation style
+```
+
+---
+
+## Reproduction / 再現手順
+
+### Prerequisites / 必要環境
+
+- Python ≥ 3.10
+- [Quarto](https://quarto.org/) (for manuscript rendering / 論文レンダリング用)
+
+### Installation / インストール
+
+```bash
+git clone https://github.com/haruki00430/NDB_XXX_pollen_allergy_v2.git
+cd NDB_XXX_pollen_allergy_v2
+python -m venv .venv
+
+# Windows
+.venv\Scripts\activate
+# macOS / Linux
+source .venv/bin/activate
+
+pip install -r requirements.txt
+```
+
+### Data Preparation / データ準備
+
+1. Download NDB Open Data No.10 from MHLW and place Excel files under `data/raw/`.  
+   NDB オープンデータ第 10 回を厚生労働省からダウンロードし `data/raw/` に配置してください。
+
+2. Pollen and air quality data are downloaded automatically by scripts 02a–02e.  
+   花粉・大気質データはスクリプト 02a〜02e で自動取得されます。
+
+### Analysis / 解析実行
+
+Run scripts 01 through 07 in order:  
+スクリプトを 01 から 07 の順に実行してください：
+
+```bash
+python scripts/01_extract_prescriptions.py
+python scripts/02a_extract_pm25.py
+python scripts/02b_extract_spm.py
+python scripts/02c_prepare_pollen_data.py
+python scripts/02e_download_weathernews_pollen.py
+python scripts/03_integrate_dataset.py
+python scripts/04_statistical_analysis.py
+python scripts/05_visualization.py
+python scripts/06_sensitivity_analysis.py
+python scripts/07_diabetes_negative_control.py
+```
+
+---
+
+## Citation / 引用
+
+If you use this code, please cite the associated manuscript and code repository:  
+本コードを使用する場合は、論文とコードリポジトリの両方を引用してください：
+
+**Manuscript**:
+> Saito H, Ohira T. How Outcome Definition Changes Ecological Inference in Prescription-Based Epidemiology: A Natural Experiment. *(In submission, Journal of Clinical Epidemiology, 2026)*
+
+**Code repository**:
+> Saito H. Analysis code for "How Outcome Definition Changes Ecological Inference in Prescription-Based Epidemiology" [Software]. Zenodo. 2026. https://doi.org/10.5281/zenodo.XXXXXXX
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+
+**OSF Analysis Plan**:
+> Saito H, Ohira T. How Outcome Definition Changes Ecological Inference in Prescription-Based Epidemiology: A Natural Experiment — Analysis Plan. OSF Registries. 2026. https://osf.io/yuc4a
+
+---
+
+## Ethics / 倫理事項
+
+This study used publicly available aggregate data. Individual informed consent was not required, and institutional ethics review was not applicable in accordance with Japanese ethical guidelines for epidemiological research.
+
+本研究は公表集計データを使用しており、個人の同意取得および倫理審査委員会の審査は不要です（疫学研究に関する倫理指針に準拠）。
+
+---
+
+## License / ライセンス
+
+Analysis code is released under the [MIT License](LICENSE).  
+NDB Open Data is provided by the Ministry of Health, Labour and Welfare of Japan and is not redistributable as part of this repository.
+
+解析コードは MIT ライセンスで公開しています。NDB オープンデータは厚生労働省が提供するものであり、本リポジトリから再配布することはできません。

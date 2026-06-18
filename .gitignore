@@ -57,3 +57,38 @@ data/raw/MLIT_N03/
 **/MLIT_N03/
 data/raw/**/*.xml
 data/temp/**/*.xml
+
+# ─── 公開対象外ファイル ────────────────────────────────
+# 学会抄録（非公開）
+04_Manuscripts/JSph85_abstracts/
+
+# 旧バージョン・中間 DOCX（*コピー* / 日付旧版 / コメント版）
+04_Manuscripts/*コピー*.docx
+04_Manuscripts/*コピー*.pdf
+04_Manuscripts/17How_*.docx
+04_Manuscripts/How_Outcome_Definition_Changes_Ecological_Inference_20260616*
+04_Manuscripts/How_Outcome_Definition_Changes_Ecological_Inference_20260617*
+04_Manuscripts/How_Outcome_Definition_Changes_Ecological_Inference_20260618_comment.docx
+04_Manuscripts/How_Outcome_Definition_Changes_Ecological_Inference_20260618_JCE.docx
+04_Manuscripts/Manuscript_How_Outcome_Definition.docx
+04_Manuscripts/Manuscript_How_Outcome_Definition.html
+
+# PDF（著作権あり・内部通知）
+04_Manuscripts/*.pdf
+
+# 旧 IJE 用スクリプト（JCE 移行後に不要）
+04_Manuscripts/_insert_keymessages_ije.py
+04_Manuscripts/_update_abstract_ije.py
+
+# 内部メモ・作業ファイル
+04_Manuscripts/comments_extracted.txt
+04_Manuscripts/Response_to_Ohira_Comments.md
+
+# 内部パッチ・検証スクリプト（本解析再現には不要）
+scripts/patch_*.py
+scripts/insert_s12_table.py
+scripts/_verify_patch.py
+
+# ログ・内部出力テキスト
+logs/
+results/*.txt
