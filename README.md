@@ -45,7 +45,7 @@ This repository contains analysis code for a nationwide ecological study examini
 ## Repository Structure / リポジトリ構造
 
 ```
-NDB_XXX_pollen_allergy_v2/
+NDB_pollen_allergy/
 ├── README.md
 ├── requirements.txt                    # Python dependencies / 依存ライブラリ
 ├── scripts/                            # Analysis scripts (run in order) / 解析スクリプト（番号順に実行）
@@ -88,8 +88,8 @@ NDB_XXX_pollen_allergy_v2/
 ### Installation / インストール
 
 ```bash
-git clone https://github.com/haruki00430/NDB_XXX_pollen_allergy_v2.git
-cd NDB_XXX_pollen_allergy_v2
+git clone https://github.com/haruki00430/NDB_pollen_allergy.git
+cd NDB_pollen_allergy
 python -m venv .venv
 
 # Windows
