@@ -92,3 +92,12 @@ scripts/_verify_patch.py
 # ログ・内部出力テキスト
 logs/
 results/*.txt
+
+# 内部パッチ・DOCXパッチスクリプト（本解析再現には不要）
+04_Manuscripts/_*.py
+
+# PubMed 検索キャッシュ・内部 JSON（再現に不要）
+.pubmed_*.json
+_esum.json
+_pmid.json
+_pmid_batch.json
