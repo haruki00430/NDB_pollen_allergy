@@ -1,0 +1,5 @@
+Outcome definition changed ecological R² by 1.72-fold under identical models.
+Allergy-specific Rx recovered pollen signal; heterogeneous comparator did not.
+Diabetes negative control: no pollen association in any specification.
+Medication outcomes are measurement instruments, not interchangeable proxies.
+Test pharmacological specificity before ecological model selection.
