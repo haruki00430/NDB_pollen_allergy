@@ -137,9 +137,9 @@ If you use this code, please cite the associated manuscript and code repository:
 > Saito H, Ohira T. How Outcome Definition Changes Ecological Inference in Prescription-Based Epidemiology: A Natural Experiment. *(In submission, Journal of Clinical Epidemiology, 2026)*
 
 **Code repository**:
-> Saito H. Analysis code for "How Outcome Definition Changes Ecological Inference in Prescription-Based Epidemiology" [Software]. Zenodo. 2026. https://doi.org/10.5281/zenodo.XXXXXXX
+> Saito H. Analysis code for "How Outcome Definition Changes Ecological Inference in Prescription-Based Epidemiology" [Software]. Zenodo. 2026. https://doi.org/10.5281/zenodo.20747801
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20747801.svg)](https://doi.org/10.5281/zenodo.20747801)
 
 **OSF Analysis Plan**:
 > Saito H, Ohira T. How Outcome Definition Changes Ecological Inference in Prescription-Based Epidemiology: A Natural Experiment — Analysis Plan. OSF Registries. 2026. https://osf.io/yuc4a

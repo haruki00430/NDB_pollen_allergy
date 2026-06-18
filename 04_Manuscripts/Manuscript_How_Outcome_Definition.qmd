@@ -152,7 +152,7 @@ The authors declare no conflicts of interest.
 
 # Data Availability
 
-The NDB Open Data used in this analysis are publicly available from the Ministry of Health, Labour and Welfare of Japan (https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000177182.html). Analysis code is available from the corresponding author upon reasonable request.
+The NDB Open Data used in this analysis are publicly available from the Ministry of Health, Labour and Welfare of Japan (https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000177182.html). Analysis code is openly available on GitHub (https://github.com/haruki00430/NDB_pollen_allergy) and archived on Zenodo (https://doi.org/10.5281/zenodo.20747801).
 
 # Author Contributions
 

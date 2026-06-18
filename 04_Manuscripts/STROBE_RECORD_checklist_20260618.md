@@ -94,15 +94,13 @@
 | 12.2 | 複雑な標本抽出デザインへの対処法 | 全47都道府県（標本抽出なし）；该当なし | ✅ N/A |
 | 13.1 | 研究集団の選択を詳細に記述する | Methods §Study Design: "Japan's 47 prefectures as the unit of analysis… All variables were aggregated at the prefecture level" | ✅ |
 | 19.1 | 研究目的以外に収集されたデータ使用の含意を論じる | Discussion §Strengths and Limitations: 行政集計データの限界（OTC不捕捉・生態学的誤謬等） | ✅ |
-| 22.1 | 補足情報へのアクセス方法を提供する | Data Availability: NDB公開URL; Analysis code: GitHub（採択後公開）; OSF: https://osf.io/yuc4a | ⚠️ |
+| 22.1 | 補足情報へのアクセス方法を提供する | Data Availability: NDB公開URL; Analysis code: GitHub (https://github.com/haruki00430/NDB_pollen_allergy); Zenodo (https://doi.org/10.5281/zenodo.20747801); OSF: https://osf.io/yuc4a | ✅ |
 
 ---
 
-## 要対応項目（⚠️）
+## 要対応項目
 
-| 項目 | 内容 | 対応方針 |
-|------|------|---------|
-| **RECORD 22.1** | Data Availability 文に GitHub URL と Zenodo DOI が未記載 | GitHub Public 化・Zenodo 登録後に QMD および DOCX を更新する |
+全項目対応完了（2026-06-18）。⚠️ 項目なし。
 
 ---
 

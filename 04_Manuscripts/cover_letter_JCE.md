@@ -26,13 +26,13 @@ We wish to proactively address two scope considerations noted in JCE's Guide for
 
 **Open science**
 
-The analysis plan was registered on the Open Science Framework prior to submission (OSF; https://osf.io/yuc4a; registered 18 June 2026). Analysis code is openly available on GitHub and will be archived on Zenodo upon acceptance. All data sources are publicly available aggregate statistics (NDB Open Data; Weathernews Open Data; Japan Meteorological Agency).
+The analysis plan was registered on the Open Science Framework prior to submission (OSF; https://osf.io/yuc4a; registered 18 June 2026). Analysis code is openly available on GitHub (https://github.com/haruki00430/NDB_pollen_allergy) and archived on Zenodo (https://doi.org/10.5281/zenodo.20747801). All data sources are publicly available aggregate statistics (NDB Open Data; Weathernews Open Data; Japan Meteorological Agency).
 
 **Declarations**
 
 - **Novelty**: This manuscript has not been submitted elsewhere and is not under consideration by another journal.  
 - **Ethics**: This study used publicly available aggregate data. Individual informed consent and institutional ethics review were not required, in accordance with Japanese ethical guidelines for epidemiological research.  
-- **Data and code availability**: NDB Open Data are publicly available from the Ministry of Health, Labour and Welfare of Japan. Analysis code is openly available on GitHub and will be archived on Zenodo upon acceptance.  
+- **Data and code availability**: NDB Open Data are publicly available from the Ministry of Health, Labour and Welfare of Japan. Analysis code is openly available on GitHub (https://github.com/haruki00430/NDB_pollen_allergy) and archived on Zenodo (https://doi.org/10.5281/zenodo.20747801).  
 - **Conflicts of interest**: The authors declare no conflicts of interest.  
 - **Funding**: None declared.  
 - **AI use disclosure**: The manuscript preparation used AI-assisted tools for drafting and code generation, as disclosed in full within the manuscript.
