@@ -62,6 +62,15 @@ data/temp/**/*.xml
 # 学会抄録（非公開）
 04_Manuscripts/JSph85_abstracts/
 
+# root 旧バージョン原稿（04_Manuscripts/ 内が正本）
+Manuscript_pollen_allergy.*
+# root 重複 BibTeX（04_Manuscripts/references.bib が正本）
+/references.bib
+# root レベルの .docx / .html / .qmd（旧作業ファイル）
+/*.docx
+/*.html
+/*.qmd
+
 # 旧バージョン・中間 DOCX（*コピー* / 日付旧版 / コメント版）
 04_Manuscripts/*コピー*.docx
 04_Manuscripts/*コピー*.pdf
