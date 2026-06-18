@@ -161,13 +161,13 @@ This study was registered on the Open Science Framework:
 
 ### Manuscript files
 - [x] Main manuscript DOCX — `How_Outcome_Definition_Changes_Ecological_Inference_20260618.docx` ✅
-- [ ] **Blinded manuscript** — Remove author names/affiliations from DOCX for double-blind review
+- [x] **Blinded manuscript** — `submission_package/manuscript_main.docx` ✅
 - [x] Title page (this file) ✅
 - [x] Cover letter — `cover_letter_JCE.md` ✅
 - [x] Highlights — `highlights_jce.txt` (5 bullets, ≤85 chars each) ✅
 - [x] STROBE + RECORD checklist — `STROBE_RECORD_checklist_20260618.md` ✅
 - [x] AI Use Disclosure — `AI_USE_DISCLOSURE.md` ✅
-- [ ] Figure 1 — high-resolution (300 dpi) image file for figure caption
+- [x] Figure 1 — `submission_package/Figure1_conceptual_model.png` (1800×1100 px, 300 dpi, PNG) ✅
 - [ ] Supplementary Tables S1–S12 — confirm inclusion as separate file or within manuscript
 
 ### Author/Declaration fields (entered directly in Editorial Manager)
