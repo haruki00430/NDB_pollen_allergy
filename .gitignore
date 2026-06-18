@@ -104,6 +104,7 @@ results/*.txt
 
 # 内部パッチ・DOCXパッチスクリプト（本解析再現には不要）
 04_Manuscripts/_*.py
+scripts/_*.py
 
 # PubMed 検索キャッシュ・内部 JSON（再現に不要）
 .pubmed_*.json
