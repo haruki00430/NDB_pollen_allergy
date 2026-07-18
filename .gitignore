@@ -84,6 +84,14 @@ Manuscript_pollen_allergy.*
 
 # PDF（著作権あり・内部通知）
 04_Manuscripts/*.pdf
+# submission_package サブディレクトリ内の PDF（EM確認書・投稿原稿PDF）
+04_Manuscripts/submission_package*/*.pdf
+# Gmail 通知メール（個人Gmailアドレス含む・全サブディレクトリ対象）
+Gmail - *.pdf
+
+# 内部作業フォルダ・内部メモ
+デスクトップ用/
+説明責任資料_*.md
 
 # 旧 IJE 用スクリプト（JCE 移行後に不要）
 04_Manuscripts/_insert_keymessages_ije.py

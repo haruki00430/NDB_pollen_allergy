@@ -134,7 +134,7 @@ If you use this code, please cite the associated manuscript and code repository:
 本コードを使用する場合は、論文とコードリポジトリの両方を引用してください：
 
 **Manuscript**:
-> Saito H, Ohira T. How Outcome Definition Changes Ecological Inference in Prescription-Based Epidemiology: A Natural Experiment. *(Submitted to Air Quality, Atmosphere & Health, 2026)*
+> Saito H, Ohira T. How Outcome Definition Changes Ecological Inference in Prescription-Based Epidemiology: A Natural Experiment. *(Submitted to Air Quality, Atmosphere & Health; Manuscript ID: AIRQ-D-26-00736, submitted 18 July 2026)*
 
 **Code repository**:
 > Saito H. Analysis code for "How Outcome Definition Changes Ecological Inference in Prescription-Based Epidemiology" [Software]. Zenodo. 2026. https://doi.org/10.5281/zenodo.20747801
